@@ -1,11 +1,14 @@
+# compiler and flags
+CXX = g++
+
 all: build
 
 build:
-	mkdir build
-	g++ ./src/main.cpp -o ./build/main
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) ./src/main.cpp -o ./build/xeno
 
 clean:
 	rm -r build
 
 run:
-	./build/main.exe
+	./build/xeno.exe

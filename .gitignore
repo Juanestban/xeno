@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/cmake,c++,macos,visualstudiocode,c
 # Edit at https://www.toptal.com/developers/gitignore?templates=cmake,c++,macos,visualstudiocode,c
 
+# dist build
+build
+
 ### C ###
 # Prerequisites
 *.d

@@ -1,0 +1,6 @@
+// The first Xeno program!
+
+var language = 'xeno';
+
+println('Hello world!');
+println("first taste");
