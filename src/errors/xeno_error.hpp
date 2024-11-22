@@ -1,6 +1,9 @@
+#ifndef XENO_ERROR
+#define XENO_ERROR
+
 #include <string>
 
-using namespace std;
+using std::string;
 
 namespace Xeno {
 
@@ -15,3 +18,5 @@ public:
 };
 
 } // namespace Xeno
+
+#endif

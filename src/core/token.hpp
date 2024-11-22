@@ -1,6 +1,9 @@
+#ifndef XENO_LEXER
+#define XENO_LEXER
+
 #include <string>
 
-using namespace std;
+using std::string;
 
 namespace Xeno::Lexer {
 
@@ -60,7 +63,7 @@ enum TokenType {
   _EOF
 };
 
-template <class Object> class Token {
+template <typename Object = void> class Token {
 private:
   const TokenType type;
   const string lexeme;
@@ -74,3 +77,5 @@ public:
 };
 
 } // namespace Xeno::Lexer
+
+#endif
