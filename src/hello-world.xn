@@ -1,6 +1,14 @@
 // The first Xeno program!
 
-var language = 'xeno';
+var language = 'xeno';      // string
+const available: int = 0;   // int
+
 
 println('Hello world!');
 println("first taste");
+
+class Vec {};
+
+class Vec2 extends Vec {};
+
+class Vec3 extends Vec2 {};
