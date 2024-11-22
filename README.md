@@ -2,7 +2,7 @@
 
 ## Mapping the Territory
 
-1. - [ ] Scanning
+1. - [X] Scanning
 2. - [ ] TOKENS
 3. - [ ] Parsing
 4. - [ ] SYNTAX TREE

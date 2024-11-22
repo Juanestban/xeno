@@ -1,6 +1,8 @@
 #ifndef XENO_SCANNER
 #define XENO_SCANNER
 
+#include <cstddef>
+#include <map>
 #include <string>
 #include <vector>
 
@@ -20,6 +22,9 @@ private:
   int current = 0;
   int line = 1;
 
+private:
+  static map<string, TokenType> keywords;
+
 public:
   Scanner(string _source);
 
@@ -27,6 +32,8 @@ public:
   bool is_at_end();
 
   vector<Token<int>> scan_tokens();
+
+  static void init_keywords();
 
 private:
   char advance() { return source.at(current++); };
@@ -144,15 +151,22 @@ private:
     return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_';
   }
 
+  bool is_alpha_numeric(char c) { return is_alpha(c) || is_digit(c); }
+
   void identifier() {
     while (is_alpha_numeric(peek())) {
       advance();
     }
 
-    add_token(IDENTIFIER);
-  }
+    string txt = source.substr(start, current);
+    TokenType type = IDENTIFIER;
 
-  bool is_alpha_numeric(char c) { return is_alpha(c) || is_digit(c); }
+    if (keywords.find(txt) != keywords.end()) {
+      type = keywords.find(txt)->second;
+    }
+
+    add_token(type);
+  }
 
   void _string() {
     while (peek() != '"' && !is_at_end()) {

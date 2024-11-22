@@ -42,11 +42,13 @@ enum TokenType {
   // keywords
   AND,
   CLASS,
+  EXTENDS,
   ELSE,
   FALSE,
   FN,
   FOR,
   IF,
+  ELFI,
   _NULL,
   UNDEFINED,
   UNKNOW,
