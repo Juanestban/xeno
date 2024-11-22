@@ -9,7 +9,9 @@
 
 namespace fs = filesystem;
 
-void Xeno::XenoFile::read_file(string &path) {
+namespace Xeno {
+
+void XenoFile::read_file(string &path) {
   try {
     fs::path sandbox{path};
 
@@ -33,3 +35,5 @@ void Xeno::XenoFile::read_file(string &path) {
     cerr << "\n[-] Error: " << err.what() << endl;
   }
 }
+
+} // namespace Xeno
