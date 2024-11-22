@@ -31,7 +31,7 @@ public:
 private:
   char advance() { return source.at(current++); };
 
-  void scan_token(enum struct TokenType type) {
+  void scan_token(enum TokenType type) {
     char c = advance();
 
     switch (c) {
