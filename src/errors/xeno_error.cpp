@@ -3,6 +3,7 @@
 #include "xeno_error.hpp"
 
 namespace Xeno {
+bool XenoError::had_error = false;
 
 void XenoError::report(int line, string where, string message) {
   string line_str = to_string(line);

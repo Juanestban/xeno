@@ -9,13 +9,16 @@ using std::string;
 namespace Xeno {
 
 class XenoError {
-private:
+public:
   static bool had_error;
 
 public:
   static void error(int line, string message);
 
   static void report(int line, string where, string message);
+
+private:
+  XenoError() = delete;
 };
 
 } // namespace Xeno
