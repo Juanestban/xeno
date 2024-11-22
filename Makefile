@@ -8,9 +8,6 @@ else
   CXXFLAGS=-Iheader -O2
 endif
 
-LDFLAGS=-L.
-LDLIBS=-lfigures
-
 # DIRECTORIES
 SRC_DIR=src
 BUILD_DIR=build
@@ -35,7 +32,7 @@ prepare_build_dir:
 
 # link the final executable
 $(BUILD_DIR)/xeno: $(OBJECTS) | prepare_build_dir
-	$(CC) $(OBJECTS) $(LDFLAGS) $(LDLIBS) -o $@
+	$(CC) $(OBJECTS) -o $@
 
 
 debug:
