@@ -11,3 +11,8 @@
 7. - [ ] BYTECODE
 8. - [ ] Optimizing
 9. - [ ] VIRTUAL MACHINE / MACHINE CODE
+
+
+## References
+
+almost implemented here was inspirated on [Bob Nystrom](https://www.craftinginterpreters.com/contents.html), thanks man 💜!
